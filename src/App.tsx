@@ -8,16 +8,18 @@ import { Home} from './component/home';
 import {  Success} from './component/success';
 
 import {
- HashRouter as Router,
+ BrowserRouter as Router,
   Routes,
   Route,
-  Link
+  Link,
+  HashRouter
 } from 'react-router-dom';
 function App() {
   
 
   return (
     <Router>
+      <HashRouter basename="/">
            <div className="App">
               
            <Routes>
@@ -25,6 +27,7 @@ function App() {
                 <Route  path='/message' element={< Success />}></Route>
           </Routes>
           </div>
+          </HashRouter>
        </Router>
   );
 }
